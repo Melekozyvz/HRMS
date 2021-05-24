@@ -1,4 +1,4 @@
-package kodlamaoi.hrms.api.controllers;
+package kodlamaio.hrms.api.controllers;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import kodlamaoi.hrms.business.abstracts.JobService;
-import kodlamaoi.hrms.entities.concrete.Job;
+import kodlamaio.hrms.business.abstracts.JobService;
+import kodlamaio.hrms.entities.concrete.Job;
 
 @RestController
 @RequestMapping("/api/jobs")
