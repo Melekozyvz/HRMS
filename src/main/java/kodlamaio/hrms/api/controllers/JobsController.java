@@ -8,19 +8,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import kodlamaio.hrms.business.abstracts.JobService;
+import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.entities.concrete.Job;
 
 @RestController
 @RequestMapping("/api/jobs")
-public class JobController {
+public class JobsController {
 	private JobService jobService;
 	@Autowired
-	public JobController(JobService jobService) {
+	public JobsController(JobService jobService) {
 		this.jobService = jobService;
 	}
 
 	@GetMapping("/getall")
-	public List<Job> getAll(){
+	public DataResult<List<Job>> getAll(){
 		return jobService.getAll();
 	}
 }
